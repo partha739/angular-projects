@@ -1,0 +1,180 @@
+<div class="addproductcont1">
+    <div class="row">
+        <div class="col-lg-8">
+    <div class="row">
+        <div class="col-lg-1 icon1">
+           <a routerLink="../home"><mat-icon>west</mat-icon></a>
+         </div>
+         <div class="col-lg-4">
+            <h2>Add product</h2>
+         </div>
+    </div>
+    <form [formGroup]="productForm"(ngSubmit)="productSubmit()">
+    <mat-card>
+        
+        <div class="title form-group">
+        <p>Title</p>
+        <input  formControlName="title"type="text"  class="form-control" matInput placeholder="Ex:Short sleeve shirt"/>
+
+        
+            
+    </div>
+        <div class="Description">
+        <p>Description</p>
+        <!-- <div class="desccont">
+            <ul id="desc1"class="desc1">
+                <li class="boldbutton"id="boldbutton"title="Strong<strong> Ctrl+B">
+                    <span style="background-position:-20px 0px"></span></li>
+            </ul>
+        </div> -->
+        </div>
+        <div class="content">
+            <mat-card>
+                <mdb-form-control>
+                    <textarea mdbInput formControlName="description" type="text" class="form-control" id="textAreaExample" rows="4"></textarea>
+                    <!-- <label mdbLabel class="form-label" for="textAreaExample">Message</label> -->
+                  </mdb-form-control>
+            </mat-card>
+        </div>
+    </mat-card>
+    <br><br>
+    <mat-card>
+        <div class="title">
+            <p>Media</p>
+            <div >
+            
+                <input formControlName="image"type="text" class="form-control" type="file" id="myFile" name="filename">
+                <br>
+                <input type="submit">
+              
+            </div>
+        </div>
+    </mat-card>
+    <br><br>
+    <mat-card>
+        <div class="pricing">
+            <p>Pricing</p>
+            <div >
+            <input formControlName="price"type="text" class="form-control" matInput placeholder="₹ 0.00"/>
+            <br><br>
+            <p>Compare price</p>
+            <input type="text" class="form-control" matInput placeholder="₹ 0.00"/>
+            <br><br>
+            <mat-checkbox>Charge tax on this product</mat-checkbox>
+            <hr>
+            <p>Pricing</p>
+            <input formControlName="pricing"type="text" class="form-control" matInput placeholder="₹ 0.00"/><br>
+            <p>customers wont see this</p>
+            </div>
+            </div>
+    </mat-card>
+    <br><br>
+    <!-- <mat-card>
+        <div class="row">
+            <div class="col-lg-12">
+        <div class="shipping">
+            <mat-checkbox>shipping</mat-checkbox>
+            <br><br>
+            <hr>
+            <p>Customers won't enter their shipping address or choose a shipping method when buying this product.</p>
+        </div>
+    </div>
+</div>
+    </mat-card> -->
+    <br><br>
+    <mat-card>
+        <div class="options">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Options</h3>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-lg-12">
+                    <mat-checkbox (click)="checked()">This product has options, like size or color</mat-checkbox>
+                </div>
+                <div *ngIf="showopt">
+                <div class="col-lg-12">
+                    <p>Option name</p>
+                </div>
+                <div class="col-lg-12">
+<!--                
+                    <select #options="ngModel"[class.is-inValid]="options.invalid && options.touched"name="option"[(ngModel)]="newproductModel.option" > -->
+                        <!-- <option value="default">Select the options</option> -->
+                         <!-- <option *ngFor="let option of options" >{{option}}</option> -->
+                        <!-- <option value="Material">Material</option>
+                        <option value="Style">Style</option> -->
+                    <!-- </select> -->
+               
+                    <div class="form-group">
+                        <!-- (blur)="validateTopic(option.value)" (change)="validateTopic(option.value)" #option="ngModel"[class.is-invalid]="optionHasError && option.invalid" class="custom-select"name="topic"[(ngModel)]="userModel.option"> -->
+                        <select formControlName="options"type="text" class="form-control">
+                            <option value="default">Select the options</option>
+                            <option *ngFor="let option of options">{{ option }}</option>
+            
+                        </select>
+                        <!-- <small class="text-danger"[class.d-none]="!optionHasError || option.untouched">Please select the options</small> -->
+                    </div>
+                </div>
+       
+        
+        <div class="col-lg-12">
+            <p>Option value</p>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-Group">
+            <input type="text"formControlName="optionsvalue"class="form-control" type= matInput placeholder={{values}}/>
+        
+       </div>
+       <div class="col-lg-12">
+        <button mat-button>Done</button>
+       </div>
+        </div>
+     
+    </div>
+            
+    
+           </div>
+        </div>
+    </mat-card>
+    <button  mat-button="save"style="background-color:green;margin-left:80%;color:white" >Save</button>
+    
+        <br>
+    </form>
+</div>
+   
+        <div class="col-lg-4">
+          <mat-card>
+            <h3>Product status</h3>
+            <select matNativeControl required style="width: 60%;height:35px" >
+                <option value="Active">Active</option>
+                <option value="Draft">Draft</option>
+              </select>
+              <br>
+              <p>This product will be available to 0 sales channels.</p>
+              <p>This product will be hidden from all sales channels.</p>
+              <br>
+              <hr>
+              <br>
+            <h3>Sales channels and apps</h3> 
+            <p><span>Select All</span></p>
+            <hr>
+            <mat-checkbox>Online sales</mat-checkbox> <br>
+            <mat-checkbox>Point of sale</mat-checkbox><br>
+            <mat-checkbox>Buy button</mat-checkbox>      
+          </mat-card><br>
+          <mat-card>
+            <h3>Product organization</h3>
+            <p>Product category</p>
+            <input matInput placeholder="Search types"><br>
+            <p>Product type</p>
+            <input matInput placeholder="eg:T-shirts"><br>
+          </mat-card>
+        </div>
+    </div>
+    <hr>
+    
+    
+</div>
+

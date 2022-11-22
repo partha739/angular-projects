@@ -1,0 +1,65 @@
+<!-- <div class="container">
+    <div >
+    <div class="row">
+        <div class="col-lg-4">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title><h1>Title</h1>
+                    <!-- {{producttitle}} -->
+                <!-- </mat-card-title>
+                 
+                </mat-card-header>
+                <img mat-card-image src="" alt=" ">
+                <mat-card-content>
+                    <h3>Description</h3>
+                  <p>
+                    ......
+                  </p>
+                  <p>Price</p>
+                </mat-card-content>
+             
+               
+              </mat-card>
+              
+        </div>
+    </div>
+    </div> -->
+<!-- </div> --> -->
+
+
+
+
+<div class="container mt-3">
+  <table class="table">
+      <thead>
+          <tr>
+              <th scope="col">id</th>
+              <th scope="col">title</th>
+              <th scope="col">description</th>
+              <th scope="col">imgage</th>
+              <th scope="col">price</th>
+              <th scope="col">pricing</th>
+              <th scope="col">options</th>
+              <th scope="col">optionsvalue</th>
+              <!-- <th scope="col">Edits</th> -->
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let us of readData">
+              <th ></th>
+              <td>{{us.id}}</td>
+              <td>{{us.title}}</td>
+              <td>{{us.description}}</td>
+              <td>{{us.image}}</td>
+              <td>{{us.price}}</td>
+              <td>{{us.pricing}}</td>
+              <td>{{us.options}}</td>
+              <td>{{us.optionsvalue}}</td>
+              <!-- <td><button class="btn btn-danger btn-sm" (click)="deleteId(us.id)">Delete</button> -->
+               <!-- <a [routerLink]="['/create','{us.id}']" class="btn btn-sm btn-success">update</a> -->
+            
+          </tr>
+      </tbody>
+  </table>
+</div>

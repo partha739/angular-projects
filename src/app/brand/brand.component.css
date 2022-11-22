@@ -1,0 +1,21 @@
+.maincont{
+    margin:10px 5% 10% 8px;;
+}
+
+.logo{
+    text-align: center;
+}
+.dottedbox{
+    border: dashed 3px;
+    border-color: grey;
+padding: 4px;
+
+
+    border-radius: 10px;
+}
+mat-card{
+    margin-top: 10px;
+}
+.secondcont{
+    margin-top: 50px;
+}

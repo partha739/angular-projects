@@ -1,0 +1,157 @@
+<div class="store">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Store details</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+        <mat-card>
+            <div class="row">
+            <div class="col-lg-6">
+                <h4>Basic information</h4>
+            </div>
+            <div class="col-lg-6">
+                <p class="edit"(click)="onClick1()" >{{value1}}</p>
+            </div>
+            </div>
+            <div *ngIf="editstore1">                       
+            <div class="row">
+                <div class="col-lg-12 storename">
+                    <p>Store name</p>
+                    <input matInput placeholder="my store">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Legal name of company</p>
+                    <input matInput placeholder="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 storeindustry">
+                    <p>Store industry</p>
+                    <select matNativeControl >
+                        <option value="Beauty">Beauty</option>
+                        <option value="Handcraft">Handcraft</option>
+                        <option value="Electronis">Electronis</option>
+                        <option value="Jwells">Jwells</option>
+                        <option value="not decide">I haven't yet decide</option>
+
+                      </select>
+                </div>
+            </div>
+        </div>
+        </mat-card>
+        <mat-card class="second">
+            <div class="row">
+                <div class="col-lg-12">
+               
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <h4>Address</h4>
+                        <p>Used on customer order confirmations and your Shopify bill.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="edit"><span (click)="onClick2()" >{{value2}}</span></p>
+                    </div>
+                    </div>
+                    <hr>
+                    <div *ngIf="editstore2"> 
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Country/Region</p>
+                        <select>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="England">England</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Sweeden">Sweeden</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Australia">Australia</option>
+                          </select>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 address">
+                            <p>Address</p>
+                            <input matInput placeholder="Address">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 address">
+                            <p>Appartment,suite,etc</p>
+                            <input matInput placeholder="Appartment,suite,etc">
+                        </div>
+                    </div>
+                    <div class="row address">
+                        <div class="col-lg-4">
+                            <p>City</p>
+                            <input matInput placeholder="City">
+                        </div>
+                        <div class="col-lg-4">
+                            <p>State</p>
+                            <input matInput placeholder="State">
+                        </div>
+                        <div class="col-lg-4">
+                            <p>pincode</p>
+                            <input matInput placeholder="pincode">
+                        </div>
+                    </div>
+                    </div>
+       
+        </div>
+    </div>
+</mat-card>
+<mat-card>
+    <div class="row">
+        <div class="col-lg-6 contact">
+            <h3>Contact information</h3>
+        </div>
+        <div class="col-lg-6">
+             <p class="edit"><span (click)="onClick3()" >{{value3}}</span></p>
+            
+        </div>
+    </div>
+   <div *ngIf="editstore3">
+
+    <div class="row">
+    <div class="col-lg-12">
+        <p>Phone</p>
+        <input matInput placeholder=""style="width:30%">
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <p>Email</p>
+        <input matInput placeholder="">
+    </div>
+</div>
+   </div>
+
+</mat-card>
+<mat-card class="currency">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Store currency</h3>
+            <p>The currency your products are sold in. For your payout currency</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>Store currency</p>
+            <select>
+                <option value="Rupee">Rupee</option>
+                <option value="Dollar">Dollar</option>
+            </select>
+        </div>
+    </div>
+</mat-card>
+        </div>
+ 
+</div>
+<hr>
+<button mat-button="save"class="bt">Save</button>

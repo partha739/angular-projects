@@ -1,0 +1,37 @@
+.store{
+    margin:3% 10% 0 10%;
+}
+.storename
+{
+    margin-bottom: 40px;
+}
+input{
+    width: 50%;
+}
+.storeindustry{
+    margin-top: 40px;
+}
+select{
+    width: 50%;
+    height:35px;
+}
+.second
+{
+    margin-top:50px;
+}
+.address{
+    margin-top: 10px;
+}
+.currency
+{
+    margin-top: 50px;
+}
+.edit{
+cursor: pointer;   
+text-align: right; 
+}
+.bt{
+    background-color:green;
+    margin-left:80%;
+    color:white
+}
